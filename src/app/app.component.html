@@ -1,0 +1,36 @@
+<h1>ViewChild Example with *ngif</h1>
+<h5>Note, for Angular 8 you have to make sure to set static: false , which is a default setting in other Agnular
+	versions</h5>
+<div #parent>
+	<div #divelement1>
+		Visible elements
+	</div>
+
+	<ng-container *ngIf="show">
+		<p #divelement2>
+			Hidden element 1
+		</p>
+	</ng-container>
+
+	<ng-container>
+		<h5 #divelement3>
+			Hidden element 2
+		</h5>
+	</ng-container>
+
+</div>
+
+<div class="row">
+	<div class="col-md-2">
+		<button *ngIf="true" id="scrollHere" class="btn btn-primary" (click)="showIt()">Show Hidden Child
+    </button>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">&nbsp;</div>
+</div>
+<div class="row">
+	<div class="col-md-2">
+		<button *ngIf="true" id="scrollHere" class=" btn btn-primary" (click)="logElements()">Log Child in Console</button>
+	</div>
+</div>
